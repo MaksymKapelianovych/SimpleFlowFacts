@@ -32,6 +32,7 @@ void UFlowNode_ListenForFactChanges::SubscribeDelegates()
 	else
 	{
 		LogError(TEXT("No valid world"));
+		// What next?
 	}
 }
 
@@ -47,7 +48,7 @@ void UFlowNode_ListenForFactChanges::UnsubscribeDelegates() const
 
 void UFlowNode_ListenForFactChanges::HandleFactValueChanged(int32 CurrentValue)
 {
-	TriggerOutput( TEXT("ValueChanged" ) );
+	TriggerOutput( TEXT( "ValueChanged" ) );
 }
 
 void UFlowNode_ListenForFactChanges::HandleFactBecameDefined(int32 CurrentValue)
@@ -87,7 +88,7 @@ FText UFlowNode_ListenForFactChanges::GetNodeTitle() const
 	{
 		FFormatOrderedArguments Args;
 		Args.Add( FText::FromString( Tag.ToString() ) );
-		return FText::Format(LOCTEXT("ListenForFactChanges", "Listen {0}"), Args );
+		return FText::Format( LOCTEXT( "ListenForFactChanges", "Listen {0}" ), Args );
 	}
 
 	return Super::GetNodeTitle();
@@ -95,7 +96,7 @@ FText UFlowNode_ListenForFactChanges::GetNodeTitle() const
 
 FString UFlowNode_ListenForFactChanges::GetNodeDescription() const
 {
-	if (UFlowSettings::Get()->bUseAdaptiveNodeTitles)
+	if ( UFlowSettings::Get()->bUseAdaptiveNodeTitles )
 	{
 		return Super::GetNodeDescription();
 	}

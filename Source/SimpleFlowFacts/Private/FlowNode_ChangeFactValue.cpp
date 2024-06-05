@@ -38,7 +38,7 @@ void UFlowNode_ChangeFactValue::ExecuteInput(const FName& PinName)
 #if WITH_EDITOR
 FString UFlowNode_ChangeFactValue::GetNodeDescription() const
 {
-	if (UFlowSettings::Get()->bUseAdaptiveNodeTitles)
+	if ( UFlowSettings::Get()->bUseAdaptiveNodeTitles )
 	{
 		return Super::GetNodeDescription();
 	}
@@ -49,6 +49,6 @@ FString UFlowNode_ChangeFactValue::GetNodeDescription() const
 	Args.Add( UEnum::GetDisplayValueAsText( ChangeType ).ToString() );
 	Args.Add( Value );
 		
-	return FString::Format( TEXT("{0}: {1} {2}"), Args );
+	return FString::Format( TEXT( "{0}: {1} {2}" ), Args );
 }
 #endif

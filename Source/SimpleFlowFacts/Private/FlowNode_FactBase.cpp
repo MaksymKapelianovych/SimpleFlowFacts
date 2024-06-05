@@ -20,7 +20,7 @@ EDataValidationResult UFlowNode_FactBase::ValidateNode()
 {
 	if ( Tag.IsValid() == false )
 	{
-		ValidationLog.Error<UFlowNode>( TEXT( "Missing Tag" ), this );
+		ValidationLog.Error< UFlowNode >( TEXT( "Missing Tag" ), this );
 		return EDataValidationResult::Invalid;
 	}
 
