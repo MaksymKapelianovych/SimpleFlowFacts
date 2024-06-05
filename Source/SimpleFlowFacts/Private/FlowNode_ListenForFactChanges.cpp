@@ -18,7 +18,7 @@ UFlowNode_ListenForFactChanges::UFlowNode_ListenForFactChanges(const FObjectInit
 #endif
 
 	InputPins = { FFlowPin( TEXT( "Start" ) ), FFlowPin( TEXT( "Stop" ) ) };
-	OutputPins = { FFlowPin( TEXT( "ValueChanged" ) ), FFlowPin( TEXT( "BecameDefined" ) ), FFlowPin( TEXT( "BecameUndefined" ) ) };
+	OutputPins = { FFlowPin( TEXT( "ValueChanged" ) ), FFlowPin( TEXT( "BecameDefined" ) ) };
 }
 
 void UFlowNode_ListenForFactChanges::SubscribeDelegates()

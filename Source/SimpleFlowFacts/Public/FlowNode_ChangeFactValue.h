@@ -22,9 +22,9 @@ protected:
 #endif
 	
 protected:
-	UPROPERTY(EditAnywhere, Category = Facts)
+	UPROPERTY(EditAnywhere, Category = "Fact")
 	int32 Value = 0;
 	
-	UPROPERTY(EditAnywhere, Category = Facts)
+	UPROPERTY(EditAnywhere, Category = "Fact")
 	EFactValueChangeType ChangeType = EFactValueChangeType::Set;
 };

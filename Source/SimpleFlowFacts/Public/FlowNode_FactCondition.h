@@ -4,14 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "FactTypes.h"
-#include "FlowNode_FactBase.h"
+#include "Nodes/FlowNode.h"
 #include "FlowNode_FactCondition.generated.h"
 
 /**
  * Node for checking fact conditions.
  * After merging https://github.com/MothCocoon/FlowGraph/pull/202 this node will be refactored.
  */
-UCLASS(meta = (DisplayName = "Fact Condition"), HideCategories=("Fact"))
+UCLASS(meta = (DisplayName = "Fact Condition"))
 class SIMPLEFLOWFACTS_API UFlowNode_FactCondition : public UFlowNode
 {
 	GENERATED_UCLASS_BODY()
@@ -24,6 +24,6 @@ protected:
 #endif
 
 protected:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = "Fact", meta = (ShowOnlyInnerProperties))
 	FFactCondition Condition;
 };
