@@ -26,6 +26,10 @@ public class SimpleFlowFacts : ModuleRules
 			new string[]
 			{
 				"Core",
+				"SimpleFacts",
+				"Flow",
+				"GameplayTags",
+				"FilteredGameplayTags",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -37,11 +41,7 @@ public class SimpleFlowFacts : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
-				"SimpleFacts",
-				"Flow",
-				"GameplayTags",
-				"FilteredGameplayTags",
+				"SlateCore"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

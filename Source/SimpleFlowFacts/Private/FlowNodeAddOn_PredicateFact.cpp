@@ -1,10 +1,40 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "FlowNode_FactCondition.h"
+#include "FlowNodeAddOn_PredicateFact.h"
 
 #include "FactSubsystem.h"
 #include "FactTypes.h"
+
+UFlowNodeAddOn_PredicateFact::UFlowNodeAddOn_PredicateFact( const FObjectInitializer& ObjectInitializer )
+	: Super( ObjectInitializer )
+{
+#if WITH_EDITOR
+	NodeStyle = EFlowNodeStyle::Logic;
+	Category = TEXT("Composite");
+#endif
+}
+
+bool UFlowNodeAddOn_PredicateFact::EvaluatePredicate_Implementation() const
+{
+	if ( UWorld* World = GetWorld() )
+	{
+		UFactSubsystem& Subsystem = UFactSubsystem::Get( World );
+		return Subsystem.CheckFactSimpleCondition( Condition );
+	}
+	else
+	{
+		LogErrorConst( TEXT( "No valid world" ) );
+		return false;
+	}
+}
+
+#if WITH_EDITOR
+FText UFlowNodeAddOn_PredicateFact::GetNodeTitle() const
+{
+	return Condition.IsValid() ? FText::FromString( Condition.ToString() ) : FText::FromString( "Fact is not set" );
+}
+#endif
 
 UFlowNode_FactCondition::UFlowNode_FactCondition(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
