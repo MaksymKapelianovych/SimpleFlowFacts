@@ -24,7 +24,7 @@ bool UFlowNodeAddOn_PredicateFact::EvaluatePredicate_Implementation() const
 	}
 	else
 	{
-		LogErrorConst( TEXT( "No valid world" ) );
+		LogError( TEXT( "No valid world" ) );
 		return false;
 	}
 }
