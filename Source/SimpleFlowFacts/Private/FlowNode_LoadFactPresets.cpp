@@ -10,11 +10,10 @@ UFlowNode_LoadFactPresets::UFlowNode_LoadFactPresets( const FObjectInitializer& 
 	: Super( ObjectInitializer )
 {
 #if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Custom;
-	NodeColor = FLinearColor{ 0.275f, 1.f, .8f };
+	NodeDisplayStyle = FlowNodeStyle::Fact;
 	Category = TEXT( "Fact" );
 #endif
-
+	
 	InputPins = { FFlowPin( TEXT( "In" ) ) };
 	OutputPins = { FFlowPin( TEXT( "Out" ) ) };
 }

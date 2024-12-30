@@ -9,7 +9,7 @@ UFlowNode_OnFactDefined::UFlowNode_OnFactDefined( const FObjectInitializer& Obje
 	: Super( ObjectInitializer )
 {
 #if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Condition;
+	NodeDisplayStyle = FlowNodeStyle::Condition;
 #endif
 }
 

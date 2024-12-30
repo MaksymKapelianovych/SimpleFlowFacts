@@ -9,14 +9,9 @@
 
 #define LOCTEXT_NAMESPACE "FlowFacts"
 
-UFlowNode_ListenForFactChanges::UFlowNode_ListenForFactChanges(const FObjectInitializer& ObjectInitializer)
-	: Super(ObjectInitializer)
+UFlowNode_ListenForFactChanges::UFlowNode_ListenForFactChanges( const FObjectInitializer& ObjectInitializer )
+	: Super( ObjectInitializer )
 {
-#if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Custom;
-	Category = TEXT( "Fact" );
-#endif
-
 	InputPins = { FFlowPin( TEXT( "Start" ) ), FFlowPin( TEXT( "Stop" ) ) };
 	OutputPins = { FFlowPin( TEXT( "ValueChanged" ) ), FFlowPin( TEXT( "BecameDefined" ) ) };
 }

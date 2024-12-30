@@ -5,16 +5,10 @@
 
 #include "FactSubsystem.h"
 #include "FactTypes.h"
-#include "FlowSettings.h"
 
 UFlowNode_ChangeFactValue::UFlowNode_ChangeFactValue(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-#if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Custom;
-	Category = TEXT( "Fact" );
-#endif
-
 	InputPins = { FFlowPin( TEXT( "In" ) ) };
 	OutputPins = { FFlowPin( TEXT( "Out" ) ) };
 }
@@ -38,11 +32,11 @@ void UFlowNode_ChangeFactValue::ExecuteInput(const FName& PinName)
 #if WITH_EDITOR
 FString UFlowNode_ChangeFactValue::GetNodeDescription() const
 {
-	if ( UFlowSettings::Get()->bUseAdaptiveNodeTitles )
+	if ( Tag.IsValid() == false )
 	{
-		return Super::GetNodeDescription();
+		return "None";
 	}
-
+	
 	FStringFormatOrderedArguments Args;
 	Args.Add(  Tag.ToString()  );
 	

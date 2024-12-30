@@ -8,11 +8,9 @@
 #include "FlowSettings.h"
 
 UFlowNodeAddOn_PredicateFact::UFlowNodeAddOn_PredicateFact( const FObjectInitializer& ObjectInitializer )
-	: Super( ObjectInitializer )
 {
 #if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Logic;
-	Category = TEXT("Composite");
+	NodeDisplayStyle = FlowNodeStyle::AddOn_Predicate;
 #endif
 }
 
