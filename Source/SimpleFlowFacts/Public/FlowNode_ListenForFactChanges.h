@@ -15,7 +15,7 @@ class UFactBase;
  *		If it is first change and fact became defined by this change, BecameDefined will be triggered first
  *	BecameDefined pin executes when fact's state transitions from undefined to defined
  */
-UCLASS(meta = (DisplayName = "Listen For Fact Changes"))
+UCLASS(meta = (DisplayName = "Listen For Fact Changes (DEPRECATED)", Tooltip = "This node is deprecated and will be removed soon, please, use On Fact Changed or On Fact Defined instead"))
 class SIMPLEFLOWFACTS_API UFlowNode_ListenForFactChanges : public UFlowNode_FactBase
 {
 	GENERATED_UCLASS_BODY()
