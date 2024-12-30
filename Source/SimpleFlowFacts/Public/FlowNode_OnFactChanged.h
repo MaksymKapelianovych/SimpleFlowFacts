@@ -7,7 +7,7 @@
 #include "FlowNode_OnFactChanged.generated.h"
 
 /**
- * Triggers output when Flow Component with matching Identity Tag calls NotifyGraph function with matching Notify Tag
+ * Triggers output every time fact's value is changed
  */
 UCLASS(NotBlueprintable, meta = (DisplayName = "On Fact Changed"))
 class SIMPLEFLOWFACTS_API UFlowNode_OnFactChanged : public UFlowNode_FactBase

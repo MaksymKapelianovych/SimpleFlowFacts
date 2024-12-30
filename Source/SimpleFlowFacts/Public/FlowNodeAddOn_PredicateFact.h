@@ -2,12 +2,11 @@
 
 #pragma once
 
-#include <AddOns/FlowNodeAddOn.h>
 
 #include "CoreMinimal.h"
 #include "FactTypes.h"
 #include "Interfaces/FlowPredicateInterface.h"
-#include "Nodes/FlowNode.h"
+#include "AddOns/FlowNodeAddOn.h"
 #include "FlowNodeAddOn_PredicateFact.generated.h"
 
 

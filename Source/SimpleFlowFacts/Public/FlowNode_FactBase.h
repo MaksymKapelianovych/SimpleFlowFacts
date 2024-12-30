@@ -7,8 +7,6 @@
 #include "Nodes/FlowNode.h"
 #include "FlowNode_FactBase.generated.h"
 
-class UFactData;
-
 /**
  *  Base node for dealing with facts
  */
