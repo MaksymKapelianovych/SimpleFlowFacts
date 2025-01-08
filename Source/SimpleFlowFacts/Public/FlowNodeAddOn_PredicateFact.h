@@ -25,5 +25,5 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, Category = "Fact", meta = (ShowOnlyInnerProperties))
-	FSimpleFactCondition Condition;
+	FFactCondition Condition;
 };

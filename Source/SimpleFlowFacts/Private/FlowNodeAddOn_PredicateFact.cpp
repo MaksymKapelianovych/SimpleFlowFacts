@@ -21,7 +21,7 @@ bool UFlowNodeAddOn_PredicateFact::EvaluatePredicate_Implementation() const
 	if ( UWorld* World = GetWorld() )
 	{
 		UFactSubsystem& Subsystem = UFactSubsystem::Get( World );
-		return Subsystem.CheckFactSimpleCondition( Condition );
+		return Subsystem.CheckFactCondition( Condition );
 	}
 	else
 	{
