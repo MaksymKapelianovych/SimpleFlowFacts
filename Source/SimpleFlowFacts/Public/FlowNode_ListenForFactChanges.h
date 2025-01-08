@@ -7,7 +7,6 @@
 #include "FactTypes.h"
 #include "FlowNode_ListenForFactChanges.generated.h"
 
-class UFactBase;
 
 /**
  *  Node that executes every time fact value changes.

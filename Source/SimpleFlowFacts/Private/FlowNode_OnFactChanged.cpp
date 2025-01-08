@@ -12,7 +12,7 @@ UFlowNode_OnFactChanged::UFlowNode_OnFactChanged( const FObjectInitializer& Obje
 	, SuccessCount( 0 )
 {
 #if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Condition;
+	NodeDisplayStyle = FlowNodeStyle::Condition;
 #endif
 
 	InputPins = { FFlowPin( TEXT( "Start" ) ), FFlowPin( TEXT( "Stop" ) ) };

@@ -9,7 +9,7 @@
 /**
  *  Change value of the fact (set or add)
  */
-UCLASS(meta = (DisplayName = "Change Fact"))
+UCLASS(NotBlueprintable, meta = (DisplayName = "Change Fact"))
 class SIMPLEFLOWFACTS_API UFlowNode_ChangeFactValue : public UFlowNode_FactBase
 {
 	GENERATED_UCLASS_BODY()

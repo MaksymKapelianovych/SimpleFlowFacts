@@ -4,10 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "FactTypes.h"
+#include "NativeGameplayTags.h"
 #include "Nodes/FlowNode.h"
 #include "FlowNode_FactBase.generated.h"
 
-class UFactData;
+namespace FlowNodeStyle
+{
+	SIMPLEFLOWFACTS_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Fact);
+}
 
 /**
  *  Base node for dealing with facts

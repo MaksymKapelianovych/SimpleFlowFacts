@@ -5,12 +5,13 @@
 
 #include "FactTypes.h"
 
-UFlowNode_FactBase::UFlowNode_FactBase(const FObjectInitializer& ObjectInitializer)
-	: Super(ObjectInitializer)
+UE_DEFINE_GAMEPLAY_TAG( FlowNodeStyle::Fact, "Flow.NodeStyle.Node.Fact" );
+
+UFlowNode_FactBase::UFlowNode_FactBase( const FObjectInitializer& ObjectInitializer )
+	: Super( ObjectInitializer )
 {
 #if WITH_EDITOR
-	NodeStyle = EFlowNodeStyle::Custom;
-	NodeColor = FLinearColor{ 0.275f, 1.f, .8f };
+	NodeDisplayStyle = FlowNodeStyle::Fact;
 	Category = TEXT( "Fact" );
 #endif
 }
