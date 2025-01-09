@@ -15,7 +15,7 @@ public class SimpleFlowFacts : ModuleRules
 				"SimpleFacts",
 				"Flow",
 				"GameplayTags",
-				"FilteredGameplayTags",
+				"TypedGameplayTags",
 			}
 		);
 			
